@@ -19,7 +19,7 @@ public class BrowserFactory {
         switch (ReadProperties.browserName().toLowerCase()) {
             case "chrome" :
                 driverManagerType = DriverManagerType.CHROME;
-                WebDriverManager.getInstance(driverManagerType).setup();//проверит возмж скопировать нужную версию драйвера
+                WebDriverManager.getInstance(driverManagerType).setup();
 
                 driver = new ChromeDriver(getChromeOptions());
                 break;
@@ -36,10 +36,10 @@ public class BrowserFactory {
     }
 
     public WebDriver getDriver() {
-        driver.manage().window().maximize();//разворот окна на максимум экрана
-        driver.manage().deleteAllCookies();//очистка куков
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
 
-        return this.driver;//возврат драйвера
+        return this.driver;
     }
 
     public ChromeOptions getChromeOptions() {
