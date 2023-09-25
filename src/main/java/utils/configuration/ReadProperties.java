@@ -31,7 +31,11 @@ public class ReadProperties {
         return properties.getProperty("password");
     }
 
-    public static boolean isHeadless() {
+    public static String FirstName() {return properties.getProperty("FirstName");}
+    public static String LastName() {return properties.getProperty("LastName");}
+    public static String PostalCode() {return properties.getProperty("LastName");}
+
+    /*public static boolean isHeadless() {
         return properties.getProperty("headless").equalsIgnoreCase("true");
-    }
+    }*/
 }
