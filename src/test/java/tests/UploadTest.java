@@ -20,7 +20,7 @@ public class UploadTest extends BaseTest {
         uploadPage.openPageByUrl();
 
         WebElement fileUploadElement = waitService.waitForExists(By.id("file-upload"));
-        String pathToFile = UploadTest.class.getClassLoader().getResource("picture.webp").getPath();
+        String pathToFile = UploadTest.class.getClassLoader().getResource("picture.jpg").getPath();
         fileUploadElement.sendKeys(pathToFile.substring(1,pathToFile.length()));
         uploadPage.getButtonSubmit().click();
         Assert.assertEquals("picture.webp",uploadPage.getLabelUploaded().getText());
