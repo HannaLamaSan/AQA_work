@@ -14,7 +14,6 @@ public abstract class BasePage {
         this.waitService = new WaitService(driver);
     }
 
-
     public void openPageByUrl(String pagePath) {
         driver.get(ReadProperties.getUrl() + pagePath);
     }
